@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FCFCFC"
-    tools:context=".SignUpPage">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCFCFC"
+        tools:context=".SignUpPage">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonback"
@@ -34,15 +35,15 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonback">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/parent_devicecard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:ignore="ExtraText">
+            android:id="@+id/parent_devicecard"
+            >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/backgroundLayout"
-                android:layout_width="212dp"
-                android:layout_height="191dp"
+                android:layout_width="320dp"
+                android:layout_height="320dp"
                 android:background="@drawable/bg"
                 android:backgroundTint="#F5F5F5"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -60,6 +61,7 @@
                     app:srcCompat="@drawable/signup_illustration" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <TextView
                 android:id="@+id/Hellotext"
@@ -80,7 +82,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="30dp"
                 android:fontFamily="@font/outfit_semibold"
                 android:letterSpacing="0"
@@ -90,99 +92,11 @@
                 android:textColor="#707070"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/Hellotext" />
 
-            <EditText
-                android:id="@+id/inputPhone"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-                android:hint="phone number"
-                android:inputType="phone"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline4"
-                app:layout_constraintHorizontal_bias="3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Welcometext" />
-
-            <EditText
-                android:id="@+id/inputName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-                android:hint="Name"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline4"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputPhone" />
-
-            <EditText
-                android:id="@+id/inputEmail"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline4"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputName" />
-
-            <EditText
-                android:id="@+id/inputPassword"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline4"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
-
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/signUpButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="72dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/continuewith_background"
-                android:fontFamily="@font/outfit_medium"
-                android:letterSpacing="0"
-                android:paddingLeft="15dp"
-                android:paddingRight="30dp"
-                android:text="Sign Up"
-                android:textAllCaps="false"
-                android:textColor="#000"
-                android:textSize="16dp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline4"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.87" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonCreatFirebaseacc"
+                android:id="@+id/buttoncreatfirebaseacc"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -199,10 +113,8 @@
                 android:textSize="16dp"
                 app:layout_constraintBottom_toTopOf="@+id/logosmarthousename"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.27"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Welcometext"
-                app:layout_constraintVertical_bias="0.923" />
+                app:layout_constraintTop_toBottomOf="@+id/Welcometext" />
 
             <ImageView
                 android:id="@+id/logosmarthousename"
@@ -215,6 +127,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/smarthousestaticname" />
 
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
